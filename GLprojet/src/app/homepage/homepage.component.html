@@ -1,0 +1,13 @@
+
+<body>
+  <h1>Shazam Clone</h1>
+ <div>
+    <button (click)="  startRecording()">Detect Song</button>
+  </div>
+ <div >
+  <h2 *ngIf="songname">{{ songname }}</h2>
+      <p *ngIf="singer">{{ singer }}</p>
+      <a *ngIf="songurl" [href]="songurl.toString()" target="_blank">{{ songurl }}</a>
+ </div>
+</body>
+

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../projetGL/.vscode"
+		},
+		{
+			"path": "../projetGL/node_modules"
+		},
+		{
+			"path": "../projetGL/src"
+		}
+	]
+}

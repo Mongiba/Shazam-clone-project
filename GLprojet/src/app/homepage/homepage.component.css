@@ -1,0 +1,20 @@
+button{
+    background-color:blue ;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    flex: 1 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    height: 10rem;
+    margin:1rem;
+    }
+    button:hover{
+        background: #1813af;
+        cursor: pointer;
+    
+    }
