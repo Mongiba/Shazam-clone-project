@@ -1,24 +1,23 @@
 header{
     background: white;
     padding: 0;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid #0088ff;
 }
-header a{
-    color: #13af51;
 
-
+a {
+    color: #0088ff;
 }
-header a:hover{
-    background: #aeadd2;
-    color: rgba(255, 255, 255, 0.916);
+a:hover {
+    background: #a7c8e6 ;
+    color: white;
 }
-.container{
-
-    margin: 0 auto;
+.container {
+    margin: 0 auto ;
     display: flex;
-    justify-content:space-between;
-}
-a.logo{
-font-weight: bold;
-padding: 1em;
+    justify-content: space-between;
+} 
+a.logo {
+    font-size: bold;
+    padding: 1em ;
+    list-style-type: none;
 }

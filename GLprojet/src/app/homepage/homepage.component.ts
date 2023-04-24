@@ -1,5 +1,6 @@
 import { HttpHeaders ,HttpClient} from '@angular/common/http';
 import { Component } from '@angular/core';
+import {HeadphoneService} from '../services/headphone/headphone.service' ;
 
 @Component({
   selector: 'app-homepage',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
+  headphones:String[] = [] ;
+  constructor(private headphoneService:HeadphoneService , private http: HttpClient) {}
+  ngOnInit(): void {
+    this.headphones = this.headphoneService.getAll() ;
+  }
   private audioChunks: any[] = [];
   private mediaRecorder: any;
   private isRecording: boolean = false;
@@ -17,7 +23,7 @@ export class HomepageComponent {
   singer: string | undefined;
   songurl: URL | undefined;
 
-  constructor(private http: HttpClient) { }
+  //constructor(private http: HttpClient) { }
   startRecording() {
     this.audioChunks = []; // clear audio chunks array
     const options = {

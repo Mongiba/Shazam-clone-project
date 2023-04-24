@@ -1,8 +1,17 @@
 
 <body>
-  <h1>Shazam Clone</h1>
+  <h1 class="title"> Welcome to Shazam Clone ! </h1>
+  <h4 style="text-align:center ; color:gray ;"> Shazam will identify any music playing around you </h4>
+  <ul>
+    <li *ngFor="let headphone of headphones">
+      <a>
+        <img src="{{headphone}}" alt="">
+      </a>
+    </li>
+  </ul>
+  <h1> Find Your Favorite Music By One Click </h1>
  <div>
-    <button (click)="  startRecording()">Detect Song</button>
+    <button (click)="  startRecording()"> Detect SONG name </button>
   </div>
  <div >
   <h2 *ngIf="songname">{{ songname }}</h2>
