@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+    color: grey;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul li {
+    max-height: 400px;
+    width: 60rem;
+    border: 1px solid whitesmoke;
+    border-radius: 2rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+ul li h1 {
+    text-align: center;
+    padding-top: 40px;
+    color: #0088ff;
+}
+img {
+    width: 70%;
+    max-height: 400px;
+  }
+
+    
