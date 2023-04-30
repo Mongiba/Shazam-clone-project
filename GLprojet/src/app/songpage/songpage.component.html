@@ -1,10 +1,3 @@
-<div *ngIf="song">
-    <h2>{{song.title}}</h2>
-    <p>Artist: {{song.artist}}</p>
-    <p>Album: {{song.album}}</p>
-    <p>Release Year: {{song.year}}</p>
-  </div>
-  <div *ngIf="!song">
-    <p>No song information available.</p>
-  </div>
-  
+<h1>{{ song.title }}</h1>
+<h2>{{ song.subtitle }}</h2>
+<a href="{{ song.url }}" target="_blank">{{ song.url }}</a>

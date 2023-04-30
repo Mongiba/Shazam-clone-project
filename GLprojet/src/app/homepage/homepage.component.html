@@ -1,7 +1,6 @@
-
 <body>
-  <h1 class="title"> Welcome to Shazam Clone ! </h1>
-  <h4 style="text-align:center ; color:gray ;"> Shazam will identify any music playing around you </h4>
+  <h1 class="title">Welcome to Shazam Clone!</h1>
+  <h4 style="text-align:center;color:gray;">Shazam will identify any music playing around you</h4>
   <ul>
     <li *ngFor="let headphone of headphones">
       <a>
@@ -9,14 +8,9 @@
       </a>
     </li>
   </ul>
-  <h1> Find Your Favorite Music By One Click </h1>
- <div>
-    <button (click)="  startRecording()"> Detect SONG name </button>
+  <h1>Find Your Favorite Music By One Click</h1>
+  <div>
+    <button (click)="startRecording()">Detect SONG name</button>
   </div>
- <div >
-  <h2 *ngIf="songname">{{ songname }}</h2>
-      <p *ngIf="singer">{{ singer }}</p>
-      <a *ngIf="songurl" [href]="songurl.toString()" target="_blank">{{ songurl }}</a>
- </div>
+  <a routerLink="/songpage" *ngIf="song">Song page</a>
 </body>
-

@@ -1,6 +1,7 @@
 import { HttpHeaders ,HttpClient} from '@angular/common/http';
 import { Component } from '@angular/core';
 import {HeadphoneService} from '../services/headphone/headphone.service' ;
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -9,7 +10,8 @@ import {HeadphoneService} from '../services/headphone/headphone.service' ;
 })
 export class HomepageComponent {
   headphones:String[] = [] ;
-  constructor(private headphoneService:HeadphoneService , private http: HttpClient) {}
+  song: any = {};
+    constructor(private router: Router,private headphoneService:HeadphoneService , private http: HttpClient) {}
   ngOnInit(): void {
     this.headphones = this.headphoneService.getAll() ;
   }
@@ -39,7 +41,7 @@ export class HomepageComponent {
         this.mediaRecorder.addEventListener("stop", () => {
           this.audioBlob = new Blob(this.audioChunks, { type: 'audio/webm; codecs=opus' });
           this.audioURL = URL.createObjectURL(this.audioBlob);
-          this.playAudio();
+          //this.playAudio();
           // check if this.audioBlob is null before making the request
           if (this.audioBlob) {
             const url = 'http://localhost:8080/detect-song';
@@ -49,10 +51,21 @@ export class HomepageComponent {
             });
             this.http.post(url, this.audioBlob, { headers }).subscribe((response: any) => {
               console.log(response);
-              this.songname = response.track.title;
-              this.singer = response.track.subtitle;
-              this.songurl = response.track.url;
-            });
+              this.song.songname = response.track.title;
+                this.song.artist = response.track.subtitle;
+                 this.song.url = response.track.url;
+                 this.router.navigate(['/songpage'], {
+                  queryParams: {
+                    title: this.song.songname,
+                    subtitle: this.song.artist,
+                    url: this.song.url,
+                  },
+                });
+              },
+              (error) => {
+                console.log(error);
+              }
+            );
           }
         });
         this.mediaRecorder.start();

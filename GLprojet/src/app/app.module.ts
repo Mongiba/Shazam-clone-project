@@ -6,14 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EnteteComponent } from './entete/entete.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { SongPageComponent } from './songpage/songpage.component';
+import { SongpageComponent } from './songpage/songpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EnteteComponent,
     HomepageComponent,
-    SongPageComponent
+    SongpageComponent
   ],
   imports: [
     BrowserModule,
