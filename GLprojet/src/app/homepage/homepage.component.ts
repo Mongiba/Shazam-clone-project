@@ -22,6 +22,8 @@ export class HomepageComponent {
   private audioBlob: Blob | null = null;
   private audioURL: string = '';
   songname: string | undefined;
+  songphoto: string | undefined;
+
   singer: string | undefined;
   songurl: URL | undefined;
 
@@ -54,11 +56,14 @@ export class HomepageComponent {
               this.song.songname = response.track.title;
                 this.song.artist = response.track.subtitle;
                  this.song.url = response.track.url;
+                 this.song.songphoto = response.track.images.coverart;
+
                  this.router.navigate(['/songpage'], {
                   queryParams: {
                     title: this.song.songname,
                     subtitle: this.song.artist,
                     url: this.song.url,
+                    photo:this.song.songphoto,
                   },
                 });
               },
