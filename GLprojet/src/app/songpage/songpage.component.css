@@ -3,30 +3,39 @@ h1 {
     color: grey;
 }
 
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     max-height: 400px;
     width: 60rem;
     border: 1px solid whitesmoke;
     border-radius: 2rem;
     margin: 2rem;
-    display: flex;
-    flex-direction: row;
     overflow: hidden;
-}
-ul li h1 {
-    text-align: center;
-    padding-top: 40px;
-    color: #0088ff;
-}
-img {
-    width: 70%;
-    max-height: 400px;
   }
-
+  
+  ul li div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  ul li h1 {
+    color: #0088ff;
+  }
+  
+  ul li h2, ul li a {
+    color: grey;
+  }
+  
+  ul li img {
+    width: 40%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 2rem;
+    margin-left: 2rem;
+  }
+  
     

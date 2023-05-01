@@ -46,11 +46,14 @@ export class HomepageComponent {
           //this.playAudio();
           // check if this.audioBlob is null before making the request
           if (this.audioBlob) {
+            
             const url = 'http://localhost:8080/detect-song';
             const headers = new HttpHeaders({
               'Content-Type': 'audio/webm; codecs=opus',
               'Content-Disposition': 'attachment; filename="audio.webm"',
-            });
+            
+            });         
+           // console.log(this.audioBlob);
             this.http.post(url, this.audioBlob, { headers }).subscribe((response: any) => {
               console.log(response);
               this.song.songname = response.track.title;
@@ -97,4 +100,4 @@ export class HomepageComponent {
       this.isPlaying = true;
     }
   }
-}////ll commit
+}
