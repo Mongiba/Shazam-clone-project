@@ -5,6 +5,8 @@ Configuration :
 Il faut installer ffmpeg comme le montre la video suivante : https://www.youtube.com/watch?v=IECI72XEox0
 
 voici l'architecture:
+
+
 ![Untitled Diagram drawio](https://user-images.githubusercontent.com/94302441/235677135-3dbb6a58-b452-4abb-8d1e-962eb32ae85f.png)
 
 voici un demo de travaille
